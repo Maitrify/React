@@ -66,7 +66,9 @@ const App = () => {
       {task.map(function(elem,idx){
         return <div key={idx} className="flex justify-between flex-col items-start relative h-52 w-42 rounded-2xl text-black pt-6 pb-3.5 px-4 bg-[url('https://cbx-prod.b-cdn.net/COLOURBOX57016095.jpg?width=800&height=800&quality=70')] bg-cover">
           <div>
-            <h2 className='absolute  bg-blue-300 p-0.5 rounded-full text-xs top-2 right-2 border-1 border-gray-800'><X size={18} color="#050505" strokeWidth={2.75} /></h2>
+            <h2 className='absolute  bg-blue-300 p-0.5 rounded-full text-xs top-2 right-2 border-1 border-gray-800'><X onClick={()=>{
+             deleteNote(idx)
+          }} size={18} color="#050505" strokeWidth={2.75} /></h2>
           <h3 className='leading-tight text-xl font-bold'>{elem.title}</h3>
           <p className='mt-4 leading-tight font-medium text-gray-700'>{elem.details}</p>
           </div>
